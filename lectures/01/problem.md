@@ -91,6 +91,12 @@ GitHub の自分の fork で、`lec01` → `main` の PR を作成します。**
 AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "LoRAとは何ですか？"
 ```
 
+基礎の比べる観点
+- 文面
+- 長さ
+- 事実の正誤
+- 確信の強さ
+- 鋼材に固有の質問への答え方 
 ### 呼び出すモデルについての補足
 モデルの仕様は更新されることがあります。  
 gemini 3.5 flashにおいては、Gemini APIのドキュメントが更新され、非推奨となりgemini 3.6 flashへ転送されるようになりました。
