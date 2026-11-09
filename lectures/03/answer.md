@@ -19,7 +19,22 @@
 
 ## 宿題
 
-- 取り組んだレベル：基礎 / 実装 / 発展
-- やったこと：
+- 取り組んだレベル： 発展
+- やったこと：coding agentのPiを動かし、公開されているPiのシステムプロンプトと、自分のエージェントのINSTRUCTIONSを比べる
 - 結果：
+    - [Pi(GitHub)_system-prompt.ts](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/system-prompt.ts)
+    - Piが吐いたログは `lectures/03/hw/pi_log/2026-11-09T00-31-57-488Z_01a1bdb8-0a2f-75d7-99ec-d2bf593c5e2b.jsonl`参照
+        - "role":"system"部分がシステムプロンプト 
+
 - 気づき・疑問：
+    - INSTRUCTIONSの場合は、xxxの場合はxxxのカスタムtoolを使う、とカスタムtoolの指定ができるが、Piの場合は、ツールは[read, write, bash, edit]という汎用的なツールが指定されている
+        - そのため、同じ質問をしたときに、Piの場合はカスタムtoolsを使わないこともあり、意図しない返答や創作の返答が返ってくるときもある。
+    - 最初の役割も
+        - Pi「あなたは、コーディングエージェントハーネスであるpi内で動作するコーディングアシスタントです」
+        - INSTRUCTIONS「あなたはAIエンジニアリング講座（AIE2025）の学習支援エージェントです。」
+    で、INSTRUCTIONSの方は具体的な役割の指示をしている。
+    - Piのシステムプロンプトにはほかに、ルールや参照ドキュメントパス項目がある。
+    - Piにカスタムtoolを足したい時はTypeScriptでExetenstionを作成する
+    - 実際にAIエージェントを自作・カスタマイズするうま味は何か？claudeやChatGPTでなく、これを使う意味は？
+        - モデルを自由に選べる
+        - 軽く最小構成、自分好みに拡張できる
