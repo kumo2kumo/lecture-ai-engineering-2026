@@ -12,3 +12,4 @@ learning_log/
 
 # macOS
 .DS_Store
+lectures/03/hw/adk_agent/glossary_agent/.adk/session.db
