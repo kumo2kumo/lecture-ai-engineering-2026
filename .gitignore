@@ -12,6 +12,7 @@ learning_log/
 
 # macOS
 .DS_Store
+lectures/03/hw/adk_agent/glossary_agent/.adk/session.db
 
 # 第5回: 資料から再生成する検索DB
 .cache/rag/
